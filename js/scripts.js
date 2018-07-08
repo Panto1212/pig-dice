@@ -1,13 +1,13 @@
 //backend logic
 
 //player constructor
-var Player = function(name, points) {
+var Player = function(name) {
   this.name = name,
-  this.points = points
-};
+  this.points = []
+}
 
-var random = Math.ceil(Math.random()*6);
-console.log(random)
+var random = Math.floor(Math.random()*6 + 1);
+
 
 
 
@@ -26,3 +26,23 @@ console.log(random)
 
 
 //frontend logic
+$(document).ready(function() {
+$("form#player1").submit(function() {
+  event.preventDefault();
+  var player1input= $("input#player1").val();
+  var player1 = new Player(player1input);
+  $("div.player1").empty();
+$("p#player1").append(player1.name);
+
+
+});
+
+
+
+
+
+
+  $("span.roll").click(function() {
+    $("#turn-points").text(random).val();
+  });
+});
