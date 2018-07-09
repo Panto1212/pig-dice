@@ -34,6 +34,8 @@ Player.prototype.hold = function() {
 Player.prototype.win = function() {
   if(this.totalscore >= 100) {
     alert(this.name + "wins the game!")
+  } else {
+    this.totalscore += this.turnscore;
   }
 }
 
