@@ -5,14 +5,84 @@ body {
 form#player2 {
   display: none;
 }
-span#start {
+button#start {
   display: none;
 }
 div.game-mode {
   display: none;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+  box-shadow: 0.1px 0px 1px 3px rgb(224, 222, 222);
 }
 h1 {
   text-align: center;
   font-weight: bold;
   font-size: 100px;
+  color:
+}
+div.player1 {
+  margin-right: 100px;
+}
+div.player2 {
+  margin-right: 100px;
+}
+input.form-control {
+  width: 500px;
+}
+button#start {
+  text-align: center;
+  height: 100px;
+  width: 500px;
+  font-size: 50px;
+}
+div#start {
+  text-align: center;
+  padding-top: 50vh;
+}
+span#rollnumber {
+  font-size: 50px;
+  color: green;
+}
+div.centered {
+  text-align: center;
+}
+div.right {
+  text-align: right;
+}
+span#totalpoints-1 {
+  font-size: 50px;
+  color: red;
+}
+span#totalpoints-2 {
+  font-size: 50px;
+  color: red;
+}
+span#turnpoints-1 {
+  font-size: 30px;
+  color: red;
+}
+span#turnpoints-2 {
+  font-size: 30px;
+  color: red;
+}
+h5 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 30px;
+}
+h3.player1 {
+  font-size: 40px;
+  color: powderblue;
+}
+h3.player2 {
+  font-size: 40px;
+  color: powderblue;
+}
+h2 {
+  font-size: 30px;
 }

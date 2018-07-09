@@ -52,13 +52,15 @@ $(document).ready(function() {
     event.preventDefault();
     $("div.player2").hide();
     $("p#player2").append("Player 2 is Ready!");
-    $("span#start").show();
+    $("button#start").show();
   });
 
-  $("span#start").click(function(event) {
-    $("div.game-mode").show();
+  $("button#start").click(function(event) {
     $("div.playernames").hide();
-    $("span#start").hide();
+    $("div#start").hide();
+    $("div.game-mode").show();
+
+
 
     var player1input = $("input#player1").val();
     var player2input = $("input#player2").val();

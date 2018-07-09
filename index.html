@@ -11,50 +11,50 @@
 
 <body>
   <h1>PIG DICE</h1>
-  <div class="container playernames centered">
-    <!-- start of container -->
+  <div class="container playernames">
     <div class="row">
-      <!-- start of row -->
-      <!-- Player 1 -->
-      <form id="player1">
+      <div class="col-xs-12 col-md-6 player1">
+        <!-- Player 1 -->
+        <form id="player1">
           <h2 id="player1">Player 1</h2>
           <div class="form-group player1">
             <label for="player1">Enter Your Name</label>
             <input type="text" id="player1" class="form-control" placeholder="Player 1" required>
           </div>
           <button type="submit" class="btn" id="player1">Ready</button>
-        <p id="player1"></p>
-      </form>
+          <p id="player1"></p>
+        </form>
+      </div>
       <!-- end of player1 form -->
 
       <!-- player 2 -->
-      <form id="player2">
+      <div class="col-xs-12 col-md-6 player2">
+        <form id="player2">
           <h2 id="player2">Player 2</h2>
           <div class="form-group player2">
             <label for="player2">Enter Your Name</label>
             <input type="text" id="player2" class="form-control" placeholder="Player 2" required>
           </div>
           <button type="submit" class="btn" id="player2">Ready</button>
-        <p id="player2"></p>
-      </form>
-      <!-- end of form -->
-
+          <p id="player2"></p>
+        </form>
+      </div>
+      <!-- end of form 2 -->
     </div>
-    <!-- end of row -->
   </div>
   <!-- end of container -->
+
   <!-- start button -->
-  <span class="btn btn-warning" id="start">Start</span>
+  <div id="start">
+  <button class="btn btn-warning" id="start">Start</button>
+</div>
+
   <!-- playing mode -->
-
   <div class="container game-mode">
-    <!-- start of container -->
     <div class="row">
-      <!-- start of row -->
-
+      
       <!-- player1 -->
       <div class="col-xs-12 col-md-4">
-<!-- start of colomn 1-->
         <h2>Player 1</h2>
         <h3 class="player1"></h3>
         <h4>Total Points</h4>
@@ -63,17 +63,15 @@
         <button type="button" class="btn btn-primary" id="roll1">Roll</button>
         <button type="button" class="btn btn-primary" id="hold1">Hold</button>
       </div>
-      <!-- end of colomn -->
-    <!-- start of colomn 2 -->
-      <div class="col-xs-12 col-md-4">
-<h2>DICE NUMBER :</h2>
-<span id="rollnumber"></span>
-</div>
-<!-- end of col 2 -->
 
-<!-- start of col 3 -->
+    <!-- dice roll -->
+      <div class="col-xs-12 col-md-4 centered">
+        <h2>DICE NUMBER :</h2>
+        <span id="rollnumber"></span>
+      </div>
+
       <!-- player2 -->
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-4 right">
         <h2>Player 2</h2>
         <h3 class="player2"></h3>
         <h4>Total Points :</h4>
@@ -82,9 +80,7 @@
         <button type="button" class="btn btn-info" id="roll2">Roll</button>
         <button type="button" class="btn btn-info" id="hold2">Hold</button>
       </div>
-      <!-- end of col3 -->
     </div>
-    <!-- end of row -->
   </div>
   <!-- end of container -->
 
