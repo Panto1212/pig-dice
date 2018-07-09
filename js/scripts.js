@@ -45,20 +45,19 @@ Player.prototype.win = function() {
 $(document).ready(function() {
   $("form#player1").submit(function() {
     event.preventDefault();
-    var player1input = $("input#player1").val();
     $("div.player1").empty();
-    $("p#player1").append(player1.name + " is Ready!");
+    $("p#player1").append("Player 1 is Ready!");
     $("form#player2").show();
   });
 
 
   $("form#player2").submit(function() {
     event.preventDefault();
-    var player2input = $("input#player2").val();
     $("div.player2").empty();
-    $("p#player2").append(player2.name + " is Ready!");
+    $("p#player2").append("Player 2 is Ready!");
     $("span#start").show();
   });
+
 
 $("span#start").click(function() {
   $("div.game-mode").show();
@@ -68,9 +67,25 @@ $("span#start").click(function() {
   var player2 = new Player(false);
 });
 
+var player1input = $("input#player1").val();
+$("h3.player1").append(player1input);
+player1.name = player1input;
 
+var player2input = $("input#player2").val();
+$("h3.player2").append(player2input);
+player2.name = player2input;
 
-  $("span.roll").click(function() {
-    $("#turn-points").text(random).val();
+  $("span.roll1").click(function(event) {
+    player1.roll = diceRoll();
+    $("span#rollnumber-1").text(player1.roll);
+    player1.rolling1();
+    $("span#turnpoints-1").text(palyer1.turnscore);
+  });
+
+  $("span.roll2").click(function(event) {
+    player2.roll = diceRoll();
+    $("span#rollnumber-2").text(player2.roll);
+    player2.rolling1();
+    $("span#turnpoints-2").text(palyer2.turnscore);
   });
 });
