@@ -41,19 +41,11 @@ Player.prototype.win = function() {
 
 
 
-
-
-
-
-
-
-
 //frontend logic
 $(document).ready(function() {
   $("form#player1").submit(function() {
     event.preventDefault();
     var player1input = $("input#player1").val();
-    var player1 = new Player(player1input);
     $("div.player1").empty();
     $("p#player1").append(player1.name + " is Ready!");
   });
@@ -62,12 +54,14 @@ $(document).ready(function() {
   $("form#player2").submit(function() {
     event.preventDefault();
     var player2input = $("input#player2").val();
-    var player2 = new Player(player2input);
     $("div.player2").empty();
     $("p#player2").append(player2.name + " is Ready!");
   });
 
-
+$("span#start").click(function() {
+  var player1 = new Player(player1input);
+  var player2 = new Player(player2input);
+});
 
 
 
