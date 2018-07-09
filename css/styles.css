@@ -1,21 +1,27 @@
 body {
   font-family: 'Slackey', cursive;
+  background-image: url("../img/example4.jpg");
+  background-size: cover;
 }
 
 form#player2 {
   display: none;
+text-align: center;
+}
+form#player1 {
+  text-align: center;
 }
 button#start {
   display: none;
 }
 div.game-mode {
   display: none;
-  margin-top: 100px;
+  margin-top: 50px;
   padding-top: 50px;
   padding-left: 100px;
   padding-right: 100px;
   padding-bottom: 50px;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255, 70%);
   box-shadow: 0.1px 0px 1px 3px rgb(224, 222, 222);
 }
 h1 {
@@ -26,12 +32,17 @@ h1 {
 }
 div.player1 {
   margin-right: 100px;
+  text-align: left;
 }
 div.player2 {
-  margin-right: 100px;
+  margin-left: 300px;
+  text-align: right;
+
 }
 input.form-control {
   width: 500px;
+  background-color: rgb(255, 255, 255, 50%);
+  text-align: center;
 }
 button#start {
   text-align: center;
