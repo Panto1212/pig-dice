@@ -32,15 +32,11 @@ Player.prototype.hold = function() {
 //when a player reaches 100
 Player.prototype.win = function() {
   if (this.totalScore >= 100) {
+    this.totalScore += this.turnScore
     alert(this.name + "wins the game!")
   }
 }
 
-var rollbutton = function() {
-  if (player1.rolling1() === true) {
-    ("span#roll1").prop('disable', true);
-  }
-}
 
 //frontend logic
 $(document).ready(function() {
