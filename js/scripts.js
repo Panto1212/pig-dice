@@ -35,6 +35,13 @@ Player.prototype.win = function() {
     alert(this.name + "wins the game!")
   }
 }
+
+var rollbutton = function() {
+  if (player1.rolling1() === true) {
+    ("span#roll1").prop('disable', true);
+  }
+}
+
 //frontend logic
 $(document).ready(function() {
 
@@ -67,33 +74,41 @@ $("h3.player1").text(player1.name);
 $("h3.player2").text(player2.name);
   });
 
-  $("span#roll1").click(function(event) {
+  $("button#roll1").click(function(event) {
     player1.rollNumber = diceRoll();
     $("span#rollnumber").text(player1.rollNumber);
     player1.rolling1();
     $("span#turnpoints-1").text(player1.turnScore);
   });
 
-  $("span#hold1").click(function(event) {
+  $("button#hold1").click(function(event) {
     player1.hold();
     $("span#totalpoints-1").text(player1.totalScore);
     $("span#rollnumber").empty();
     $("span#turnpoints-1").empty();
+    $(this).prop('disabled', true);
+    $("button#roll1").prop('disabled', true);
+    $("button#roll2").prop('disabled', false);
+    $("button#hold2").prop('disabled', false);
     player1.win();
   });
 
-  $("span#roll2").click(function(event) {
+  $("button#roll2").click(function(event) {
     player2.rollNumber = diceRoll();
     $("span#rollnumber").text(player2.rollNumber);
     player2.rolling1();
     $("span#turnpoints-2").text(player2.turnScore);
   });
 
-  $("span#hold2").click(function(event) {
+  $("button#hold2").click(function(event) {
     player2.hold();
     $("span#totalpoints-2").text(player2.totalScore);
     $("span#rollnumber").empty();
     $("span#turnpoints-2").empty();
+    $(this).prop("disabled", true);
+    $("button#roll2").prop("disabled", true);
+    $("button#roll1").prop("disabled", false);
+    $("button#hold1").prop("disabled", false);
     player2.win();
   });
 });
