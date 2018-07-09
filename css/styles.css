@@ -1,0 +1,9 @@
+form#player2 {
+  display: none;
+}
+span#start {
+  display: none;
+}
+div.game-mode {
+  display: none;
+}

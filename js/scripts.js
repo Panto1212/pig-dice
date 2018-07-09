@@ -48,6 +48,7 @@ $(document).ready(function() {
     var player1input = $("input#player1").val();
     $("div.player1").empty();
     $("p#player1").append(player1.name + " is Ready!");
+    $("form#player2").show();
   });
 
 
@@ -56,11 +57,15 @@ $(document).ready(function() {
     var player2input = $("input#player2").val();
     $("div.player2").empty();
     $("p#player2").append(player2.name + " is Ready!");
+    $("span#start").show();
   });
 
 $("span#start").click(function() {
-  var player1 = new Player(player1input);
-  var player2 = new Player(player2input);
+  $("div.game-mode").show();
+  $("div.playernames").hide();
+  $("span#start").hide();
+  var player1 = new Player(true);
+  var player2 = new Player(false);
 });
 
 
